@@ -7,12 +7,14 @@ import "./App.css";
 
 import axios from "axios";
 
+const apiURL = process.env.API_URL || "http://localhost:3200";
+
 function App() {
   const [data, setData] = useState({});
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:3200");
+      const response = await axios.get(apiURL);
       setData(response.data);
     } catch (err) {
       console.error("Error");
