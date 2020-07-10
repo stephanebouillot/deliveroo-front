@@ -7,7 +7,7 @@ import "./App.css";
 
 import axios from "axios";
 
-const apiURL = process.env.API_URL || "http://localhost:3200";
+const apiURL = "https://deliveroo-stephane.herokuapp.com/";
 
 function App() {
   const [data, setData] = useState({});
