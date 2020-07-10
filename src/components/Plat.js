@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Plat = (props) => {
   return (
@@ -16,7 +16,11 @@ const Plat = (props) => {
           </div>
         </div>
       </div>
-      {props.meal.picture ? <img src={props.meal.picture} /> : ""}
+      {props.meal.picture ? (
+        <img alt={props.meal.title} src={props.meal.picture} />
+      ) : (
+        ""
+      )}
     </div>
   );
 };

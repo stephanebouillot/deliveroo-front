@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Restaurant = (props) => {
   return (
@@ -9,7 +9,11 @@ const Restaurant = (props) => {
           {props.restaurant ? props.restaurant.description : "description"}
         </p>
       </div>
-      <img src={props.restaurant ? props.restaurant.picture : "image"}></img>
+      {props.restaurant ? (
+        <img alt={props.restaurant.name} src={props.restaurant.picture}></img>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
