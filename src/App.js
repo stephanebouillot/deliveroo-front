@@ -1,24 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import Header from "./components/Header";
+import Restaurant from "./components/Restaurant";
+import Menu from "./components/Menu";
+
+import "./App.css";
+
+import axios from "axios";
 
 function App() {
+  const [data, setData] = useState({});
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get("http://localhost:3200");
+      setData(response.data);
+    } catch (err) {
+      console.error("Error");
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+
+      <main className="main">
+        <Restaurant restaurant={data.restaurant} />
+
+        <Menu categories={data.categories} />
+      </main>
+
+      {/* <Footer /> */}
     </div>
   );
 }

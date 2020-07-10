@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+.header {
+  display: flex;
+  margin: 0 auto;
+
+  height: 100px;
+
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.header img {
+  width: 300px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  margin-left: 50px;
+  margin-right: 50px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+  /* background-color: rgb(240, 240, 240); */
+  /* min-height: 40rem; */
+}
+.restaurant {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 40px 50px;
+}
+.restaurant img {
+  display: block;
+
+  width: 450px;
+  /* object-fit: cover; */
+  border-radius: 5px;
+}
+.namerestaurant {
+  height: 250px;
+  flex-direction: column;
+  padding-bottom: 60px;
+  color: black;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.namerestaurant h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.descriptionrestaurant {
+  color: gray;
+  font-size: 25px;
+  font-weight: normal;
+  padding-right: 50px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 50px;
+
+  background-color: rgb(240, 240, 240);
+}
+.categorie {
+  display: flex;
+  flex-direction: column;
+}
+.categorie h2 {
+  color: black;
+  font-size: 35px;
+}
+.cartes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 70%;
+  /* border: 0.5px solid blue; */
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  width: 550px;
+  height: 230px;
+  margin: 10px;
+}
+.detailsCarte {
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  display: block;
+
+  margin: 15px;
+  width: 150px;
+  height: 150px;
+  /* object-fit: cover; */
+  border-radius: 5px;
+}
+.titlecard {
+  padding: 15px;
+  color: black;
+  font-size: 25px;
+  font-style: normal;
+}
+.detailtitlecard {
+  padding-bottom: 15px;
+  padding-left: 15px;
+  color: rgb(150, 150, 150);
+  font-size: 18px;
+  font-style: normal;
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap; */
+  /* height: 50px; */
+}
+.bascard {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.price {
+  color: rgb(150, 150, 150);
+  font-size: 25px;
+  padding-left: 15px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.populaire {
+  color: orange;
+  font-size: 20px;
+  font-weight: bolder;
+  padding-left: 10px;
 }
