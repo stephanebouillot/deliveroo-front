@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Plat from "./Plat";
 
 const Categorie = (props) => {
@@ -7,7 +7,7 @@ const Categorie = (props) => {
       <h2>{props.categorie.name ? props.categorie.name : "Categorie"}</h2>
       <div className="cartes">
         {props.categorie.meals.map((detailplat) => (
-          <Plat meal={detailplat} />
+          <Plat meal={detailplat} addProduct={props.addProduct} />
         ))}
       </div>
     </div>

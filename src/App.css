@@ -18,8 +18,6 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  /* background-color: rgb(240, 240, 240); */
-  /* min-height: 40rem; */
 }
 .restaurant {
   display: flex;
@@ -54,13 +52,19 @@
   padding-right: 50px;
 }
 
+.menu-panier {
+  display: flex;
+  flex-direction: row;
+
+  align-items: start;
+  background-color: rgb(240, 240, 240);
+
+  padding: 0 50px;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
-
-  padding: 0 50px;
-
-  background-color: rgb(240, 240, 240);
 }
 .categorie {
   display: flex;
@@ -74,7 +78,6 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 70%;
   /* border: 0.5px solid blue; */
 }
 .card {
@@ -85,6 +88,7 @@
   width: 550px;
   height: 230px;
   margin: 10px;
+  cursor: pointer;
 }
 .detailsCarte {
   display: flex;
@@ -115,7 +119,7 @@
   /* overflow: hidden; */
   /* text-overflow: ellipsis; */
   /* white-space: nowrap; */
-  /* height: 50px; */
+  /* height: 50px;cursor: pointer; */
 }
 .bascard {
   display: flex;
@@ -133,4 +137,125 @@
   font-size: 20px;
   font-weight: bolder;
   padding-left: 10px;
+}
+.panier {
+  position: sticky;
+  top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex-shrink: 0;
+  flex-basis: 450px;
+  background-color: white;
+  font-size: 15px;
+  font-style: normal;
+  color: black;
+
+  margin-top: 50px;
+}
+.boutonValidation {
+  background-color: #50ccbc;
+  margin: 10px 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  height: 70px;
+  border: none;
+  border-radius: 5px;
+}
+.panier-product {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 10px;
+  height: 30px;
+}
+.panier-product-quantity {
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 10px;
+}
+.buttonpanier {
+  display: flex;
+  border: none;
+  background-color: white;
+  padding: 10px 10px;
+  cursor: pointer;
+  outline-style: none;
+}
+
+.panier-product i {
+  display: flex;
+  font-size: 30px;
+  color: #50ccbc;
+  border: none;
+
+  text-align: center;
+}
+.panier-product-name {
+  display: flex;
+  flex-grow: 1;
+  font-size: 18px;
+  padding: 15px 10px;
+  border: none;
+
+  /* text-align: center; */
+}
+.panier-product-price {
+  display: flex;
+  font-size: 18px;
+  padding: 15px 10px;
+}
+.hr {
+  size: 1px;
+  color: blue;
+}
+
+.frais {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.panier-product-frais {
+  display: flex;
+  font-family: arial, Helvetica, sans-serif;
+  font-size: 22px;
+  padding: 0px 10px;
+  border: none;
+
+  /* text-align: center; */
+}
+.livraison {
+  display: flex;
+  font-family: arial, Helvetica, sans-serif;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 22px;
+}
+.panier-product-livraison {
+  display: flex;
+  font-family: arial, Helvetica, sans-serif;
+  padding: 10px 10px;
+  font-size: 22px;
+
+  border: none;
+}
+.total {
+  display: flex;
+
+  font-family: arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px 10px;
+  height: 30px;
+}
+.somme {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
 }

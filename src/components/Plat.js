@@ -1,8 +1,16 @@
 import React from "react";
 
 const Plat = (props) => {
+  const handleClick = () => {
+    props.addProduct({
+      id: props.meal.id,
+      name: props.meal.title,
+      price: Number(props.meal.price),
+    });
+  };
+
   return (
-    <div className="card">
+    <div className="card" onClick={handleClick}>
       <div className="detailsCarte">
         <div className="titlecard">{props.meal.title}</div>
         <div className="detailtitlecard">{props.meal.description}</div>
