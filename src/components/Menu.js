@@ -1,6 +1,5 @@
 import React from "react";
 import Categorie from "./Categorie";
-import Panier from "./Panier";
 
 const Menu = (props) => {
   return (
