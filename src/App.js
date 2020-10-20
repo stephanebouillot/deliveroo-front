@@ -8,8 +8,8 @@ import "./App.css";
 
 import axios from "axios";
 
-// const apiURL = "https://deliveroo-stephane.herokuapp.com/";
-const apiURL = "http://localhost:3200/";
+const apiURL = "https://deliveroo-stephane.herokuapp.com/";
+// const apiURL = "http://localhost:3200/";
 
 function App() {
   const [data, setData] = useState({});
